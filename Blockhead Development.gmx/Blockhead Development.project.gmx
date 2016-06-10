@@ -6,17 +6,84 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="Enemy">
-      <sprite>sprites\spr_enemy_shooter</sprite>
-      <sprite>sprites\spr_enemy_shooter_walk</sprite>
+    <sprites name="Entities">
+      <sprites name="Enemy">
+        <sprite>sprites\spr_enemy_shooter</sprite>
+        <sprite>sprites\spr_enemy_shooter_walk</sprite>
+      </sprites>
+      <sprites name="Player">
+        <sprite>sprites\spr_Player</sprite>
+        <sprite>sprites\spr_Player_walk</sprite>
+      </sprites>
     </sprites>
-    <sprites name="Player">
-      <sprite>sprites\spr_Player</sprite>
-      <sprite>sprites\spr_Player_walk</sprite>
+    <sprites name="GUI">
+      <sprites name="Cursor">
+        <sprite>sprites\spr_cursor_target</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Mask">
+      <sprite>sprites\spr_mask_Player</sprite>
+      <sprite>sprites\spr_mask_wall</sprite>
+    </sprites>
+    <sprites name="Weapons">
+      <sprites name="Bullets">
+        <sprite>sprites\spr_bullet</sprite>
+      </sprites>
+      <sprites name="Player Gun">
+        <sprite>sprites\spr_player_gun</sprite>
+        <sprite>sprites\spr_player_gun_reload</sprite>
+        <sprite>sprites\spr_player_gun_shoot</sprite>
+      </sprites>
+      <sprites name="Enemy Gun">
+        <sprite>sprites\spr_enemy_gun</sprite>
+        <sprite>sprites\spr_enemy_gun_reload</sprite>
+        <sprite>sprites\spr_enemy_gun_shoot</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Collisions">
+      <script>scripts\collision_safe.gml</script>
+    </scripts>
+    <scripts name="Player">
+      <script>scripts\player_move_stop.gml</script>
+      <script>scripts\player_init.gml</script>
+      <script>scripts\player_animate.gml</script>
+    </scripts>
+    <scripts name="VFX">
+      <script>scripts\vfx_fadeout.gml</script>
+      <script>scripts\vfx_animate.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <objects name="Controllers">
+      <object>objects\cntrl_debug</object>
+    </objects>
+    <objects name="Entities">
+      <objects name="Player">
+        <object>objects\obj_Player</object>
+      </objects>
+    </objects>
+    <objects name="GUI">
+      <object>objects\cursor_target</object>
+    </objects>
+    <objects name="Items">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_Player_gun</object>
+    </objects>
+    <objects name="Parents">
+      <object>objects\par_Bullet</object>
+      <object>objects\par_Solid</object>
+    </objects>
+    <objects name="Solid">
+      <object>objects\obj_wall</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
